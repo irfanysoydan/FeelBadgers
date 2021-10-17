@@ -26,7 +26,7 @@ body {
 .container {
   max-width: 114rem;
   margin: auto;
-  width: 90%;
+  width: 100%;
 }
 
 a {
@@ -42,5 +42,64 @@ ul {
 
 img {
   width: 100%;
+}
+
+/* Top Header */
+.top-header {
+  border-bottom: 1px solid #a58055;
+  background-color: #14151a;
+}
+
+.top-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-header .container .logo h1 {
+  font-size: 5rem;
+  font-family: "Bebas Neue", cursive;
+  color: #a58055;
+}
+
+.top-header .container .header-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-header .container .header-social li {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.top-header .container .header-social li a {
+  font-size: 2rem;
+  color: #a58055;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.top-header .container .header-social li:hover a {
+  color: #fefefe;
+}
+
+.top-header .container .login-area a {
+  margin: 0 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #a58055;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.top-header .container .login-area a:hover {
+  color: #fefefe;
 }
 /*# sourceMappingURL=styles.css.map */

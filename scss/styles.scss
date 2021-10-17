@@ -1,23 +1,5 @@
-/* Google Fonts Links */
-
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap,Quicksand:wght@400;500;600;700&display=swap");
-
-/* End Google Fonts Links */
-
-
-/* Variables*/
-
-$primary-font: "Bebas Neue",
-cursive;
-$secondary-font: "Quicksand",
-sans-serif;
-$primary-color: #a58055;
-$secondary-color: #14151a;
-$gray-color: #9f9f9f;
-$light-color: #fefefe;
-
-/* END Variables */
-
+@import 'abstracts';
+@import 'components.scss';
 
 /* General Settings */
 
@@ -42,7 +24,7 @@ body {
 .container {
     max-width: 114rem;
     margin: auto;
-    width: 90%;
+    width: 100%;
 }
 
 a {
@@ -58,4 +40,51 @@ ul {
 
 img {
     width: 100%;
+}
+
+
+/* Top Header */
+
+.top-header {
+    border-bottom: 1px solid $primary-color;
+    background-color: $secondary-color;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            h1 {
+                font-size: 5rem;
+                font-family: $primary-font;
+                color: $primary-color;
+            }
+        }
+        .header-social {
+            display: flex;
+            li {
+                margin: 0 1rem;
+                padding: 1rem;
+                a {
+                    font-size: 2rem;
+                    color: $primary-color;
+                    transition: $transition-1;
+                }
+                &:hover a {
+                    color: $light-color;
+                }
+            }
+        }
+        .login-area {
+            a {
+                margin: 0 1rem;
+                padding: 1rem;
+                font-size: 2rem;
+                color: $primary-color;
+                transition: $transition-1;
+                &:hover {
+                    color: $light-color;
+                }
+            }
+        }
+    }
 }
