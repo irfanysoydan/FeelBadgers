@@ -15,7 +15,10 @@ $primary-color: #a58055;
 $secondary-color: #14151a;
 $gray-color: #9f9f9f;
 $light-color: #fefefe;
-$dark-color:#000000;
-$transition-1: all .5s;
+$dark-color: #000000;
+$transition-1: all 0.5s;
 
 /* END Variables */
+
+@import "utilities";
+@import "mixins";

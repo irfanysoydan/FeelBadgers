@@ -1,5 +1,5 @@
-@import 'abstracts';
-@import 'components.scss';
+@import "abstracts";
+@import "components";
 
 /* General Settings */
 
@@ -31,7 +31,7 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: $primary-font;
-    /* color: $light-color; */
+    color: $light-color;
 }
 
 ul {
@@ -47,11 +47,8 @@ img {
 
 .top-header {
     border-bottom: 1px solid $primary-color;
-    background-color: $secondary-color;
     .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-display(flex, center, space-between);
         .logo {
             h1 {
                 font-size: 5rem;
@@ -75,15 +72,73 @@ img {
             }
         }
         .login-area {
-            a {
-                margin: 0 1rem;
-                padding: 1rem;
-                font-size: 2rem;
-                color: $primary-color;
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+
+/* END Top Header */
+
+
+/* Bottom Header */
+
+.bot-header {
+    .navbar {
+        @include flex-display(flex, center, space-between);
+        .navbar-list {
+            display: flex;
+            li {
+                line-height: 8rem;
+                position: relative;
                 transition: $transition-1;
-                &:hover {
-                    color: $light-color;
+                .dropdown {
+                    position: absolute;
+                    background-color: lighten($secondary-color, 5%);
+                    width: 150%;
+                    left: -1%;
+                    z-index: 10;
+                    top: 12rem;
+                    opacity: 0;
+                    transition: $transition-1;
+                    li {
+                        line-height: 4rem;
+                    }
                 }
+                &:hover {
+                    background-color: $primary-color;
+                    .dropdown {
+                        opacity: 1;
+                        top: 8rem;
+                    }
+                }
+            }
+            a {
+                padding: 0 2rem;
+                font-size: 1.6rem;
+                letter-spacing: 0.2rem;
+            }
+            i {
+                color: $light-color;
+                font-size: 1.6rem;
+            }
+        }
+        .search-area {
+            input[type="search"],
+            button[type="submit"] {
+                border: none;
+                background-color: transparent;
+                color: $light-color;
+            }
+            input[type="search"] {
+                border-bottom: 1px solid $primary-color;
+                padding-left: 0.3rem;
+            }
+            button[type="submit"] {
+                cursor: pointer;
+                margin-left: -4rem;
             }
         }
     }

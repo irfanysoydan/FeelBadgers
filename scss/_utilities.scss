@@ -1,0 +1,25 @@
+/* Utilities */
+
+.bg {
+    &-dark {
+        background-color: $dark-color;
+    }
+    &-light {
+        background-color: $light-color;
+    }
+}
+
+.ml {
+    &-2 {
+        margin-left: 2rem;
+    }
+}
+
+.mr {
+    &-1 {
+        margin-right: 1rem;
+    }
+}
+
+
+/* END Utilities */
