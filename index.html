@@ -8,17 +8,23 @@
     <title>Feel Badgers</title>
     <!-- Custom CSS-->
     <link rel="stylesheet" href="./scss/styles.css">
+    <script src="./js/script.js"></script>
+
 
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/c8b854edf0.js" crossorigin="anonymous"></script>
+
+    <!-- Owl Carousel CSS-->
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.css">
 
 </head>
 
 <body>
 
-    <!-- HEADER Section -->
+    <!-- HEADER -->
 
-    <div class="main-header bg-dark ">
+    <header class="main-header bg-dark ">
         <!-- TOP Header-->
         <div class="top-header">
             <div class="container">
@@ -77,8 +83,68 @@
                 </nav>
             </div>
         </div>
-    </div>
+    </header>
 
+    <!-- END Header-->
+
+
+    <main role="main">
+        <!-- Main Slide-->
+        <div class="main-slider owl-carousel owl-theme">
+            <!-- Single Slide-->
+            <div class="single-slide">
+                <img src="./img/Main Logo.jpg">
+                <div class="slide-overlay">
+                    <div class="container">
+                        <div class="slide-content">
+                            <h2>GAME PORTAL</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos cum quis veritatis fugiat, accusantium ipsam, ratione similique vel eveniet animi nobis commodi, nostrum reiciendis laboriosam tempore expedita excepturi hic ad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Slide-->
+            <div class="single-slide">
+                <img src="./img/Main Logo.jpg">
+                <div class="slide-overlay">
+                    <div class="container">
+                        <div class="slide-content">
+                            <h2>GAME PORTAL</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos cum quis veritatis fugiat, accusantium ipsam, ratione similique vel eveniet animi nobis commodi, nostrum reiciendis laboriosam tempore expedita excepturi hic ad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Slide-->
+            <div class="single-slide">
+                <img src="./img/Main Logo.jpg">
+                <div class="slide-overlay">
+                    <div class="container">
+                        <div class="slide-content">
+                            <h2>GAME PORTAL</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos cum quis veritatis fugiat, accusantium ipsam, ratione similique vel eveniet animi nobis commodi, nostrum reiciendis laboriosam tempore expedita excepturi hic ad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!--JQUERY-->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!--OWL CAROUSEL-->
+    <script src="./js/owl.carousel.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            let owl = $(".owl-carousel").owlCarousel({
+                autoplay: false,
+                dots: false,
+                items: 1
+            })
+        });
+    </script>
 
 </body>
 
